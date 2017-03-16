@@ -59,9 +59,7 @@ group :development do
   gem 'capistrano-passenger', '~> 0.2.0'
 end
 
-group :production, :development, :test do
-  gem 'mysql2', '>= 0.3.13', '< 0.5'
-end
+gem 'mysql2', '>= 0.3.13', '< 0.5'
 
 group :development, :test do
   gem 'mysql2', '>= 0.3.13', '< 0.5'
