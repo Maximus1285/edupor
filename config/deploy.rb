@@ -13,4 +13,6 @@ set :use_sudo, false
 set :rails_env, 'production'
 set :ssh_options, { forward_agent: true, port: 22 }
 set :passenger_restart_with_touch, true
-server 'ec2-35-162-4-85.us-west-2.compute.amazonaws.com'
+role :web, 'ec2-35-162-4-85.us-west-2.compute.amazonaws.com'
+role :app, 'ec2-35-162-4-85.us-west-2.compute.amazonaws.com'
+role :db, 'ec2-35-162-4-85.us-west-2.compute.amazonaws.com', :primary => true
