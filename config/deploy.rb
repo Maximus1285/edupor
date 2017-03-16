@@ -8,11 +8,7 @@ set :linked_files, fetch(:linked_files, []).push('config/database.yml', 'config/
 set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'public/system')
 set :branch, 'test_deployment'
 set :deploy_via, :copy
-set :user, 'deployer'
 set :use_sudo, false
 set :rails_env, 'production'
 set :ssh_options, { forward_agent: true, port: 22 }
 set :passenger_restart_with_touch, true
-role :web, 'ec2-35-162-4-85.us-west-2.compute.amazonaws.com'
-role :app, 'ec2-35-162-4-85.us-west-2.compute.amazonaws.com'
-role :db, 'ec2-35-162-4-85.us-west-2.compute.amazonaws.com', :primary => true
