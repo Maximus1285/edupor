@@ -59,9 +59,8 @@ group :development do
   gem 'capistrano-passenger', '~> 0.2.0'
 end
 
-group :production do
-  gem 'pg'
-  # gem 'rails_12factor' # Use only for heroku, avoid in production server
+group :production, :development, :test do
+  gem 'mysql2', '>= 0.3.13', '< 0.5'
 end
 
 group :development, :test do
